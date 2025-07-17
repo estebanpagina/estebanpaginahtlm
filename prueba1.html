@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>página de prueba 1</title>
+  <style>
+    @font-face {
+      font-family: 'spritegraffiti';
+      src: url('spritegraffiti.otf') format('opentype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: arial, sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    h1 {
+      font-family: 'spritegraffiti', cursive;
+      font-size: 48px;
+      color: #8b0000;
+      margin: 40px auto 20px;
+      text-align: center;
+      animation: movertexto 7s linear infinite;
+      position: relative;
+    }
+
+    @keyframes movertexto {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .contenido-lateral {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 90%;
+      max-width: 1100px;
+      margin: 20px auto 40px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .imagen-izquierda {
+      max-width: 280px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .texto-lateral {
+      flex: 1;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      font-size: 18px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .titulo-texto {
+      font-family: georgia, serif;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #ffd700;
+    }
+
+    .video-html {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .video-html h3 {
+      color: #ffd700;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.3);
+      border: none;
+    }
+
+    .pie-pagina {
+      width: 100%;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .boton-regreso {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .boton-regreso:hover {
+      background-color: #ffa500;
+    }
+
+    .gif-homero {
+      margin-top: 20px;
+      width: 200px;
+      height: 150px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 768px) {
+      .contenido-lateral {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      iframe {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="video-fondo">
+    <source src="53998c0df9315b6248fe1474bc28f531.mp4" type="video/mp4">
+    tu navegador no soporta video html5.
+  </video>
+
+  <h1>Definición</h1>
+
+  <div class="contenido-lateral">
+    <img src="imageninteligente.jpg" alt="Imagen lateral" class="imagen-izquierda">
+    <div class="texto-lateral">
+      <h2 class="titulo-texto">¿Qué es una página web?</h2>
+      <p>
+        Se conoce como página Web, página electrónica o página digital a un documento digital de carácter multimediático, adaptado a los estándares de la World Wide Web (WWW) y a la que se puede acceder a través de un navegador Web y una conexión activa a Internet.
+
+        Una página web es una colección de textos y elementos multimedia organizados por medio de un lenguaje de etiquetas (hipertexto).  
+        Fuente: https://concepto.de/pagina-web/
+      </p>
+
+      <div class="video-html">
+        <h3>▶ Más información sobre HTML:</h3>
+        <iframe src="https://www.youtube.com/embed/IsLveeYgeK8?si=Ip7m1rhgUFNqsS71" title="Video sobre HTML"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="pie-pagina">
+    <button onclick="location.href='prueba2.html'" class="boton-regreso">Ir a la siguiente página</button>
+    <button onclick="location.href='index.html'" class="boton-regreso">Ir a la página de inicio</button>
+    <div>
+      <img src="dictionary-simpsons.gif" alt="GIF animado" class="gif-homero">
+    </div>
+  </div>
+</body>
+</html>

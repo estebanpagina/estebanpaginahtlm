@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>página académica interactiva</title>
+  <style>
+    @font-face {
+      font-family: 'spritegraffiti';
+      src: url('spritegraffiti.otf') format('opentype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    #video-fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    h1 {
+      font-family: 'spritegraffiti', cursive;
+      font-size: 48px;
+      color: #ffd700;
+      margin: 50px auto 30px;
+      animation: movertexto 7s linear infinite;
+      position: relative;
+    }
+
+    @keyframes movertexto {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .contenedor {
+      width: 90%;
+      max-width: 950px;
+      margin: 0 auto;
+      padding-bottom: 120px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #ffd700;
+      font-family: georgia, serif;
+      margin: 25px 0 10px;
+    }
+
+    .tabla-academica {
+      margin: 20px auto 40px;
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+    }
+
+    .tabla-academica th,
+    .tabla-academica td {
+      border: 1px solid #fff;
+      padding: 12px;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .tabla-academica th {
+      background-color: #ffd700;
+      color: #000;
+    }
+
+    .tabla-academica a {
+      color: #00ced1;
+      text-decoration: none;
+    }
+
+    .tabla-academica a:hover {
+      text-decoration: underline;
+      color: #1e90ff;
+    }
+
+    .boton-imagen {
+      position: fixed;
+      bottom: 160px;
+      left: 50%;
+      transform: translatex(-50%);
+      z-index: 2;
+    }
+
+    .boton-imagen img {
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .boton-imagen img:hover {
+      transform: translatey(-5px) scale(1.05);
+    }
+
+    .gif-inferior {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translatex(-50%);
+      width: 200px;
+      height: 150px;
+      z-index: 1;
+    }
+
+    .contador-visitas {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 100;
+      background-color: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop id="video-fondo">
+    <source src="50bb21fd122685c98581a7d55c5f180b.mp4" type="video/mp4">
+    tu navegador no soporta video html5.
+  </video>
+
+  <div class="contenedor">
+    <h1>HTML</h1>
+    <h2>Mis Datos Académicos</h2>
+    <h2>SENA FICHA: 3171189</h2>
+
+    <table class="tabla-academica">
+      <tr>
+        <th>Inducción</th>
+        <th>TIC</th>
+        <th>Matemáticas</th>
+        <th>Física</th>
+      </tr>
+      <tr>
+        <td><a href="https://repositorio.sena.edu.co/handle/11404/1943" target="_blank">SENA</a></td>
+        <td><a href="https://word.cloud.microsoft/es-es/" target="_blank">Word</a></td>
+        <td><a href="https://www.matematicas18.com/es/tutoriales/aritmetica/fracciones/" target="_blank">Fracciones</a></td>
+        <td><a href="https://www.fisicalab.com/apartado/mru" target="_blank">MRU</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.studocu.com/co/document/servicio-nacional-de-aprendizaje/induccion/guia-de-aprendizaje-induccion-sena/23139354" target="_blank">FPI</a></td>
+        <td><a href="https://www.microsoft.com/es-co/microsoft-365/excel" target="_blank">Excel</a></td>
+        <td><a href="https://enciclopediaiberoamericana.com/numeros-decimales/" target="_blank">Decimales</a></td>
+        <td><a href="https://www.fisicalab.com/apartado/mrua" target="_blank">MRUA</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.sena.edu.co/es-co/comunidades/instructores/Paginas/escuelaInstructores.aspx" target="_blank">Progamación</a></td>
+        <td><a href="https://www.microsoft.com/es-co/microsoft-365/access" target="_blank">Access</a></td>
+        <td><a href="https://enciclopediaiberoamericana.com/numeros-ordinales/" target="_blank">O/U</a></td>
+        <td><a href="https://www.fisicalab.com/apartado/ley-ohm" target="_blank">OHM</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://contratistas.sena.edu.co/wpsigainduccion.aspx" target="_blank">Proyecto</a></td>
+        <td><a href="https://www.w3schools.com/html/" target="_blank">HTML</a></td>
+        <td><a href="https://enciclopediaiberoamericana.com/como-convertir-un-numero-decimal-a-fraccion/" target="_blank">Conversiones</a></td>
+        <td><a href="https://www.fisicalab.com/apartado/leyes-newton" target="_blank">Newton</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <a href="prueba1.html" class="boton-imagen">
+    <img src="boton-html-840x225.jpg" alt="Ir a otra página">
+  </a>
+
+  <img src="r.gif" alt="GIF animado" class="gif-inferior">
+
+  <div class="contador-visitas">
+    <div id="sfc1lm9jgm28j99sguc2jfc7vd2hvptjz4w"></div>
+    <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=1lm9jgm28j99sguc2jfc7vd2hvptjz4w&down=async" async></script>
+    <noscript>
+      <a href="https://www.freecounterstat.com" title="contador de visitas web">
+        <img src="https://counter1.optistats.ovh/private/freecounterstat.php?c=1lm9jgm28j99sguc2jfc7vd2hvptjz4w" border="0" alt="contador de visitas web">
+      </a>
+    </noscript>
+  </div>
+</body>
+</html>
